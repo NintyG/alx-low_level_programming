@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _memset - function that fills memory with a constant byte
+ *  _memset - function that fills memory with a constant byte
  *@s: first value
  *@b: second value
  *@n: thirth value
  *
- * Return: char with result of memset
+ * Return: Nothing
 */
 char *_memset(char *s, char b, unsigned int n)
 
