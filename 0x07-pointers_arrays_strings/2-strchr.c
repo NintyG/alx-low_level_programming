@@ -1,25 +1,25 @@
 #include "main.h"
-#include "string.h"
-/*
- * _strchr - function that locates a character in a string
- * @s: first value -char
- * @c: second value - char
- *
- * Return: char with result
- */
-char *strchr(char *s, char c)
+
+/**
+*_strspn - Gets the length of a prefix
+* @s: string to be tested
+* @accept: string to find
+* Return: returns the number of bytes
+*/
+unsigned int _strspn(char *s, char *accept)
 {
-	if (*s == '\0')
-		return (s);
-	while (*s)
+	unsigned int x, y;
+	unsigned int c = 0;
+
+	for (x = 0; s[x] != 0; x++)
 	{
-		if (*s == c)
+		if (s[x] == ' ')
+			break;
+		for (y = 0; accept[y] != 0; y++)
 		{
-			return (s);
+			if (s[x] == accept[y])
+				c++;
 		}
-		s++;
 	}
-	if (c == '\0')
-		return (s);
-	return ('\0');
+	return (c);
 }
