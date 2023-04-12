@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * argstostr - Link all the arguments of the program.
+ * argstostr - concatenates all the arguments of your program.
  * @ac: arguments count
  * @av: arguments vector
  *
@@ -11,17 +11,17 @@
 char *argstostr(int ac, char **av)
 {
 	char *str, *s;
-	int x, y, z, len = 0;
+	int i, j, k, len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (x = 0; x < ac; x++)
+	for (i = 0; i < ac; i++)
 	{
-		s = av[x];
-		y = 0;
+		s = av[i];
+		j = 0;
 
-		while (s[y++])
+		while (s[j++])
 			len++;
 		len++;
 	}
@@ -30,20 +30,20 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 
-	for (x = 0, y = 0; x < ac && y < len; x++)
+	for (i = 0, j = 0; i < ac && j < len; i++)
 	{
-		s = av[x];
-		z = 0;
+		s = av[i];
+		k = 0;
 
-		while (s[z])
+		while (s[k])
 		{
-			str[y] = s[z];
-			z++;
-			z++;
+			str[j] = s[k];
+			k++;
+			j++;
 		}
-		str[y++] = '\n';
+		str[j++] = '\n';
 	}
-	str[y] = '\0';
+	str[j] = '\0';
 
 	return (str);
 }
