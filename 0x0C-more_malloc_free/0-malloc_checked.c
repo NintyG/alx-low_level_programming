@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * malloc_checked - function that cause normal process
+ * malloc_checked - cause normal process termination with a status value of 98
  *
  * @b: allocated memory
  *
@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *i;
 
-	i = maloc(b);
+	i = malloc(b);
 	if (i == NULL)
 		exit(98);
 	return (i);
