@@ -1,32 +1,41 @@
-#include "3-calc.h"
-#include <stdlib.h>
-#include <string.h>
+#include "function_pointers.h"
 
 /**
-  * get_op_func - ...
-  * @s: ...
-  *
-  * Return: ...
-  */
-int (*get_op_func(char *s))(int, int)
+
+ * int_index - return index place if comparison = true, else -1
+
+ * @array: array
+
+ * @size: size of elements in array
+
+ * @cmp: pointer to func of one of the 3 in main
+
+ * Return: 0
+
+ */
+
+int int_index(int *array, int size, int (*cmp)(int))
+
 {
-	op_t ops[] = {
-	{ "+", op_add },
-	{ "-", op_sub },
-	{ "*", op_mul },
-	{ "/", op_div },
-	{ "%", op_mod },
-	{ NULL, NULL }
-	};
-	int i = 0;
 
-	while (i < 5)
-	{
-		if (strcmp(s, ops[i].op) == 0)
-			return (ops[i].f);
+        int i;
 
-		i++;
-	}
 
-	return (0);
+        if (array == NULL || size <= 0 || cmp == NULL)
+
+                return (-1);
+
+
+        for (i = 0; i < size; i++)
+
+        {
+
+                if (cmp(array[i]))
+
+                        return (i);
+
+        }
+
+        return (-1);
+
 }
