@@ -11,7 +11,7 @@ The repository includes the following directories:
 ✓ 0x04-more_functions_nested_loops: It expands on functions and nested loops.
 ✓ 0x05-pointers_arrays_strings: This explores pointer manipulation and array/string manipulation.
 ✓ 0x06-pointers_arrays_strings: This continues with pointers, arrays, and strings 
-✓0x07-pointers_arrays_strings`: Further extends knowledge of pointers, arrays, and strings. 
+✓0x07-pointers_arrays_strings: This Further extends knowledge of pointers, arrays, and strings. 
 
 ✓  Usage
 Each directory typically contains one or more C files, along with any necessary header files or additional resources. To use the code in this repository, follow these steps:
